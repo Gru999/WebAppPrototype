@@ -1,4 +1,49 @@
 ﻿@page
 @model WebAppPrototype.Pages.Bookings.IndexModel
 @{
+    ViewData["Title"] = "Bookings";
 }
+
+<h1>List of Bookings</h1>
+
+<form method="post">
+    <p>
+        Search: <input type="text" asp-for="@Model.FilterCriteria" />
+        <input type="submit" value="Search" />
+    </p>
+</form>
+<a  asp-page="CreateBooking" >Make a new Booking</a>
+<p>Number of Bookings @repo.GetAllBookings().Count</p>
+<p>Antal hoteller @hotelRepo.GetAllHotels().Count</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Country</th>
+            <th>Place</th>
+            <th>DateTime</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (Event item in Model.Events)
+        {
+                <tr>
+                    <td>@item.BookingId</td>
+                    <td>@item.Name</td>
+                    <td>@item.Description</td>
+                    <td>@item.Price</td>
+                    <td>@item.DateTime</td>
+                    <td>@item.TimeFrame</td>
+
+                    <td><a asp-page="EditEvent" asp-route-id=@item.Id>Edit</a>| 
+                        <a asp-page="DeleteEvent" asp-route-id=@item.Id>Delete</a></td>
+                </tr>
+
+
+
+        }
+    </tbody>
+</table>
