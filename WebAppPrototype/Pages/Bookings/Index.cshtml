@@ -14,7 +14,6 @@
 </form>
 <a  asp-page="CreateBooking" >Make a new Booking</a>
 <p>Number of Bookings @repo.GetAllBookings().Count</p>
-<p>Antal hoteller @hotelRepo.GetAllHotels().Count</p>
 <table class="table">
     <thead>
         <tr>
@@ -28,7 +27,7 @@
     </thead>
     <tbody>
 
-        @foreach (Event item in Model.Events)
+        @foreach (Booking item in Model.Bookings)
         {
                 <tr>
                     <td>@item.BookingId</td>
@@ -38,8 +37,8 @@
                     <td>@item.DateTime</td>
                     <td>@item.TimeFrame</td>
 
-                    <td><a asp-page="EditEvent" asp-route-id=@item.Id>Edit</a>| 
-                        <a asp-page="DeleteEvent" asp-route-id=@item.Id>Delete</a></td>
+                    <td><a asp-page="EditBooking" asp-route-id=@item.Id>Edit</a>| 
+                        <a asp-page="DeleteBooking" asp-route-id=@item.Id>Delete</a></td>
                 </tr>
 
 

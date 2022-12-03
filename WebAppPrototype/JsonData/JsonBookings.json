@@ -1,0 +1,26 @@
+[
+  {
+    "BookingId": 1,
+    "Name": "Lorem Ipsum",
+    "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "Price": "99.9",
+    "DateTime": "2022-11-1T12:00:00",
+    "TimeFrame": "2022-11-1T12:00:00"
+  },
+  {
+    "BookingId": 2,
+    "Name": "Lorem Ipsum",
+    "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "Price": "99.9",
+    "DateTime": "2022-11-1T12:00:00",
+    "TimeFrame": "2022-11-1T12:00:00"
+  },
+  {
+    "BookingId": 3,
+    "Name": "Lorem Ipsum",
+    "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "Price": "99.9",
+    "DateTime": "2022-11-1T12:00:00",
+    "TimeFrame": "2022-12-1T12:00:00"
+  }
+]
