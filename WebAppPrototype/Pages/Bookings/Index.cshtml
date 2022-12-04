@@ -1,5 +1,8 @@
 ﻿@page
 @model WebAppPrototype.Pages.Bookings.IndexModel
+@using WebAppPrototype.Models
+@using WebAppPrototype.Interfaces
+@inject IBookingRepository repo
 @{
     ViewData["Title"] = "Bookings";
 }
@@ -13,6 +16,7 @@
     </p>
 </form>
 <a  asp-page="CreateBooking" >Make a new Booking</a>
+@*Might be repo... or _repo... i think*@
 <p>Number of Bookings @repo.GetAllBookings().Count</p>
 <table class="table">
     <thead>
@@ -20,9 +24,9 @@
             <th>Id</th>
             <th>Name</th>
             <th>Description</th>
-            <th>Country</th>
-            <th>Place</th>
+            <th>Price</th>
             <th>DateTime</th>
+            <th>TimeFrame</th>
         </tr>
     </thead>
     <tbody>
@@ -36,9 +40,8 @@
                     <td>@item.Price</td>
                     <td>@item.DateTime</td>
                     <td>@item.TimeFrame</td>
-
-                    <td><a asp-page="EditBooking" asp-route-id=@item.Id>Edit</a>| 
-                        <a asp-page="DeleteBooking" asp-route-id=@item.Id>Delete</a></td>
+                    <td><a asp-page="EditBooking" asp-route-bookingId=@item.BookingId>Edit</a>| 
+                        <a asp-page="DeleteBooking" asp-route-bookingId=@item.BookingId>Delete</a></td>
                 </tr>
 
 

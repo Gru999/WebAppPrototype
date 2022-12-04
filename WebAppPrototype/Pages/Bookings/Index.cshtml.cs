@@ -11,9 +11,9 @@ namespace WebAppPrototype.Pages.Bookings
         private IBookingRepository _repo;
         public string FilterCriteria { get; set; }
         public List<Booking> Bookings { get; private set; }
-        public IndexModel(IBookingRepository bookingRepo)
+        public IndexModel(IBookingRepository repo)
         {
-            _repo = bookingRepo;
+            _repo = repo;
         }
         public void OnGet()
         {

@@ -7,7 +7,7 @@ namespace WebAppPrototype.Services
 {
     public class JsonBookingRepository : IBookingRepository {
         string JsonFileName = @"\JsonData\JsonBookings.json";
-        public void AddEvent(Booking bk)
+        public void AddBooking(Booking bk)
         {
             List<Booking> @bookings = GetAllBookings().ToList();
             List<int> bookingIds = new List<int>();
@@ -28,7 +28,7 @@ namespace WebAppPrototype.Services
             JsonFileWriter.WritetoJsonBookings(@bookings, JsonFileName);
         }
 
-        public void DeleteEvent(int bookingId)
+        public void DeleteBooking(int bookingId)
         {
             List<Booking> bookings = GetAllBookings().ToList();
             Booking deleteBooking = GetBooking(bookingId);
@@ -56,10 +56,10 @@ namespace WebAppPrototype.Services
             foreach (var bok in bookings)
             {
                 //userid - snak med Julie om hvad hun kalder den
-                if (bok.memberUser.Equals(user))
-                {
-                    userBookings.Add(bok);
-                }
+                //if (bok.memberUser.Equals(user))
+                //{
+                //    userBookings.Add(bok);
+                //}
             }
             return userBookings;
         }
