@@ -6,9 +6,9 @@ namespace WebAppPrototype.Helpers
 {
     public class JsonFileWriter
     {
-        public static void WritetoJsonBookings(List<Booking> bookings, string JsonFileName)
+        public static void WritetoJsonBookings(List<Booking> bookings, string jsonFileName)
         {
-            using (FileStream outputStream = File.Create(JsonFileName))
+            using (FileStream outputStream = File.Create(jsonFileName))
             {
                 var writer = new Utf8JsonWriter(outputStream, new JsonWriterOptions
                 {

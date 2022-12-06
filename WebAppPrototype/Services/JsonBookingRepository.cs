@@ -6,7 +6,7 @@ using WebAppPrototype.Models;
 namespace WebAppPrototype.Services
 {
     public class JsonBookingRepository : IBookingRepository {
-        string JsonFileName = @"\JsonData\JsonBookings.json";
+        string jsonFileName = @"JsonData\JsonBookings.json";
         public void AddBooking(Booking bk)
         {
             List<Booking> @bookings = GetAllBookings().ToList();
@@ -25,7 +25,7 @@ namespace WebAppPrototype.Services
                 bk.BookingId = 1;
             }
             @bookings.Add(bk);
-            JsonFileWriter.WritetoJsonBookings(@bookings, JsonFileName);
+            JsonFileWriter.WritetoJsonBookings(@bookings, jsonFileName);
         }
 
         public void DeleteBooking(int bookingId)
@@ -33,7 +33,7 @@ namespace WebAppPrototype.Services
             List<Booking> bookings = GetAllBookings().ToList();
             Booking deleteBooking = GetBooking(bookingId);
             bookings.Remove(deleteBooking);
-            JsonFileWriter.WritetoJsonBookings(bookings, JsonFileName);
+            JsonFileWriter.WritetoJsonBookings(bookings, jsonFileName);
         }
 
         public List<Booking> FilterBookings(string filter)
@@ -66,7 +66,7 @@ namespace WebAppPrototype.Services
 
         public List<Booking> GetAllBookings()
         {
-            return JsonFileReader.ReadJsonBookings(JsonFileName);
+            return JsonFileReader.ReadJsonBookings(jsonFileName);
         }
 
         public Booking GetBooking(int bookingId)
@@ -98,7 +98,7 @@ namespace WebAppPrototype.Services
                         b.DateTime = bk.DateTime;
                     }
                 }
-                JsonFileWriter.WritetoJsonBookings(bookings, JsonFileName);
+                JsonFileWriter.WritetoJsonBookings(bookings, jsonFileName);
             }
         }
     }

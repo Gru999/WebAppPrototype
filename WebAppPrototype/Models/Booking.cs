@@ -18,9 +18,9 @@ namespace WebAppPrototype.Models
 
         public double Price { get; set; }
 
-        [Required(ErrorMessage = "The date is required")]
-        [Range(typeof(DateTime), "11/11/2022", "11/11/2024",
-        ErrorMessage = "Value for {0} must be between {1} and {2}")]
+        //[Required(ErrorMessage = "The date is required")]
+        //[Range(typeof(DateTime), "11/11/2022", "11/11/2023",
+        //ErrorMessage = "Value for {0} must be between {1} and {2}")]
         public DateTime DateTime { get; set; }
 
         //Might not the right var type yet
