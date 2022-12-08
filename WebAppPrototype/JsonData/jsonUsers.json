@@ -1,0 +1,23 @@
+[
+  {
+    "UserId": 1,
+    "Name": "Alice",
+    "Email": "anna@gmail.com",
+    "Password": "12345678",
+    "PhoneNumber": "12345678"
+  },
+  {
+    "UserId": 2,
+    "Name": "Bob",
+    "Email": "bob@email.dk",
+    "Password": "12345678",
+    "PhoneNumber": "12345678"
+  },
+  {
+    "UserId": 3,
+    "Name": "Charlie",
+    "Email": "charlie@email.dk",
+    "Password": "12345678",
+    "PhoneNumber": "12345678"
+  }
+]
