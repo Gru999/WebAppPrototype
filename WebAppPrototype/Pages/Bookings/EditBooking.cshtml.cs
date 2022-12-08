@@ -4,45 +4,36 @@ using Microsoft.Extensions.Logging;
 using WebAppPrototype.Interfaces;
 using WebAppPrototype.Models;
 
-namespace WebAppPrototype.Pages.Bookings
-{
-    public class EditBookingModel : PageModel
-    {
+namespace WebAppPrototype.Pages.Bookings {
+    public class EditBookingModel : PageModel {
         private IBookingRepository _repo;
+
         [BindProperty]
         public Booking Booking { get; set; }
-        public EditBookingModel(IBookingRepository bookingRepo)
-        {
+
+        public EditBookingModel(IBookingRepository bookingRepo) {
             _repo = bookingRepo;
         }
-        public IActionResult OnGet(int bookingId)
-        {
+        public IActionResult OnGet(int bookingId) {
             Booking = _repo.GetBooking(bookingId);
             return Page();
         }
-        public IActionResult OnPost()
-        {
-            if (!ModelState.IsValid)
-            {
+        public IActionResult OnPost() {
+            if (!ModelState.IsValid) {
                 return Page();
             }
             _repo.UpdateBooking(Booking);
             return RedirectToPage("Index");
         }
-        public IActionResult OnPostEdit()
-        {
-            if (!ModelState.IsValid)
-            {
+        public IActionResult OnPostEdit() {
+            if (!ModelState.IsValid) {
                 return Page();
             }
             _repo.UpdateBooking(Booking);
             return RedirectToPage("Index");
-
         }
-        public IActionResult OnPostDelete(int bookingId)
-        {
-            if (!ModelState.IsValid)
-            {
+        public IActionResult OnPostDelete(int bookingId) {
+            if (!ModelState.IsValid) {
                 return Page();
             }
             _repo.DeleteBooking(bookingId);

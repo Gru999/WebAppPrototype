@@ -11,10 +11,10 @@ namespace WebAppPrototype.Helpers {
                 JsonSerializer.Serialize<Booking[]>(writer, bookings.ToArray());
             }
         }
-        public static void WriteToJsonUsers(List<User> countries, string jsonFileName) {           
+        public static void WriteToJsonUsers(List<User> users, string jsonFileName) {           
             using (FileStream outputStream = File.Create(jsonFileName)) {
                 var writter = new Utf8JsonWriter(outputStream, new JsonWriterOptions {SkipValidation = false, Indented = true,});
-                JsonSerializer.Serialize<User[]>(writter, countries.ToArray());
+                JsonSerializer.Serialize<User[]>(writter, users.ToArray());
             }
         }
     }

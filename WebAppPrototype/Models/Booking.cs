@@ -26,17 +26,19 @@ namespace WebAppPrototype.Models
         //Might not the right var type yet
         public DateTime TimeFrame { get; set; }
 
-        public override bool Equals(object? obj) {
-            if (obj == null) {
-                return false;
-            } else {
-                Booking other = obj as Booking;
-                if (other.BookingId == BookingId) {
-                    return true;
-                } else {
-                    return false;
-                }
-            }
-        }
+
+        //Might be needed later on
+        //public override bool Equals(object? obj) {
+        //    if (obj == null) {
+        //        return false;
+        //    } else {
+        //        Booking other = obj as Booking;
+        //        if (other.BookingId == BookingId) {
+        //            return true;
+        //        } else {
+        //            return false;
+        //        }
+        //    }
+        //}
     }
 }

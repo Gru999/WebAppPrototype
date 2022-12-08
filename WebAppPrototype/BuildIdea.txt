@@ -1,3 +1,3 @@
 ﻿[]Figure out a solve for transfering id's in case a straight forward plan does not work
 []Build the login form first, then implement it with the user
-[]Use own field iput instead of Pouls
+[]Use own field iput instead of Pouls-

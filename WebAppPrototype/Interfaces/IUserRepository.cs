@@ -4,6 +4,7 @@ namespace WebAppPrototype.Interfaces
     public interface IUserRepository
     {
         List<User> GetAllUsers();
-        void AddUser(User ur);
+        User GetUser(int userId);
+        void AddUser(User user);
     }
 }

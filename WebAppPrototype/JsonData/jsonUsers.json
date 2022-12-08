@@ -2,22 +2,23 @@
   {
     "UserId": 1,
     "Name": "Alice",
+    "PhoneNumber": "12345678",
     "Email": "anna@gmail.com",
-    "Password": "12345678",
-    "PhoneNumber": "12345678"
+    "Password": "12345678"
   },
   {
     "UserId": 2,
     "Name": "Bob",
-    "Email": "bob@email.dk",
-    "Password": "12345678",
-    "PhoneNumber": "12345678"
+    "PhoneNumber": "12345678",
+    "Email": "bob@gmail.com",
+    "Password": "12345678"
   },
   {
     "UserId": 3,
     "Name": "Charlie",
-    "Email": "charlie@email.dk",
-    "Password": "12345678",
-    "PhoneNumber": "12345678"
-  }
+    "PhoneNumber": "12345678",
+    "Email": "charlie@gmail.com",
+    "Password": "12345678"
+  },
+  null
 ]

@@ -1,16 +1,16 @@
 ﻿using WebAppPrototype.Models;
 namespace WebAppPrototype.Services {
     public class LogInRepository {
-        private User _UserLoggedIn;
+        private User _UserLogIn;
 
         public void UserLogIn(User user) {
-            _UserLoggedIn = user;
+            _UserLogIn = user;
         }
         public void UserLogOut() {
-            _UserLoggedIn = null;
+            _UserLogIn = null;
         }
         public User GetLoggedUser() { 
-            return _UserLoggedIn; 
+            return _UserLogIn; 
         }
     }
 }
