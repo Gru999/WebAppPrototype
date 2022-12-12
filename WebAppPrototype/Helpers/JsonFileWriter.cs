@@ -17,5 +17,13 @@ namespace WebAppPrototype.Helpers {
                 JsonSerializer.Serialize<User[]>(writter, users.ToArray());
             }
         }
+        public static void WriteToJsonBoats(List<Boat> boats, string jsonFileName)
+        {
+            using (FileStream outputStream = File.Create(jsonFileName))
+            {
+                var writter = new Utf8JsonWriter(outputStream, new JsonWriterOptions { SkipValidation = false, Indented = true, });
+                JsonSerializer.Serialize<Boat[]>(writter, boats.ToArray());
+            }
+        }
     }
 }

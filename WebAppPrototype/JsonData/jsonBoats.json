@@ -1,0 +1,17 @@
+[
+  {
+    "BoatId": 1,
+    "BoatName": "Alice",
+    "Pier": 1
+  },
+  {
+    "BoatId": 2,
+    "BoatName": "Bob",
+    "Pier": 2
+  },
+  {
+    "BoatId": 3,
+    "BoatName": "Charlie",
+    "Pier": 3
+  }
+]

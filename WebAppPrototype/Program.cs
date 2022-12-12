@@ -7,6 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddTransient<IBookingRepository, JsonBookingRepository>();
 builder.Services.AddTransient<IUserRepository, JsonUserRepository>();
+builder.Services.AddTransient<IBoatRepository, JsonBoatRepository>();
 builder.Services.AddSingleton<LogInRepository>();
 
 var app = builder.Build();
