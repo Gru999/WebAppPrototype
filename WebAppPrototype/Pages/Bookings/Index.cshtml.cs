@@ -8,11 +8,13 @@ namespace WebAppPrototype.Pages.Bookings {
     public class IndexModel : PageModel {
         private IBookingRepository _repo;
         public string FilterCriteria { get; set; }
+        //to get GetAllBookingsByUser working add User property
         public List<Booking> Bookings { get; private set; }
         public IndexModel(IBookingRepository repo) {
             _repo = repo;
         }
         public void OnGet() {
+            //should prob be GetAllBookingsByUser(User.Name)
             Bookings = _repo.GetAllBookings();
         }
         public void OnPost() {
