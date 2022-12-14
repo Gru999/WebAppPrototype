@@ -40,15 +40,16 @@ namespace WebAppPrototype.Services {
             return filterList;
         }
 
-        public List<Booking> GetAllBookingsByUser(string user) {
+        public List<Booking> GetAllBookingsByUser(int userId) {
             List<Booking> userBookings = new List<Booking>();
+            List<User> users = GetAllUsers();
             List<Booking> bookings = GetAllBookings();
             foreach (var bok in bookings) {
                 //userid - snak med Julie om hvad hun kalder den
-                //if (bok.memberUser.Equals(user))
-                //{
-                //    userBookings.Add(bok);
-                //}
+                if (users)
+                {
+                    userBookings.Add(bok);
+                }
             }
             return userBookings;
         }

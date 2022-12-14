@@ -8,6 +8,6 @@ namespace WebAppPrototype.Interfaces {
         void UpdateBooking(Booking bk);
         void DeleteBooking(int bookingId);
         List<Booking> FilterBookings(string filter);
-        List<Booking> GetAllBookingsByUser(string user);
+        List<Booking> GetAllBookingsByUser(int userId);
     }
 }

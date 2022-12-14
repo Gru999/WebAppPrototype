@@ -26,13 +26,14 @@ namespace WebAppPrototype.Pages.Bookings {
             BoatNames = new SelectList(Boats, "Id", "Name");
         }
         public IActionResult OnGet() {
-            //User = _loggedInUser.GetLoggedUser();
+            User = _loggedInUser.GetLoggedUser();
             return Page();
         }
         public IActionResult OnPost() {
             if (!ModelState.IsValid) {
                 return Page();
             }
+
             _bookingRepo.AddBooking(Booking);
             return RedirectToPage("Index");
         }
