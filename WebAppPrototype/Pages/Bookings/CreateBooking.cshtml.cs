@@ -13,6 +13,7 @@ namespace WebAppPrototype.Pages.Bookings {
         private LogInRepository _loggedInUser;
         private IBoatRepository _boatRepo;
 
+
         public SelectList BoatNames { get; set; }
 
         [BindProperty]
@@ -25,8 +26,11 @@ namespace WebAppPrototype.Pages.Bookings {
             List<Boat> Boats = _boatRepo.GetAllBoats();
             BoatNames = new SelectList(Boats, "Id", "Name");
         }
-        public IActionResult OnGet() {
+
+        //find solution for injecting UserId into GetAllBooingsByUser
+        public IActionResult OnGet(int userId) {
             User = _loggedInUser.GetLoggedUser();
+            Booking = _bookingRepo.GetAllBookingsByUser(userId);
             return Page();
         }
         public IActionResult OnPost() {

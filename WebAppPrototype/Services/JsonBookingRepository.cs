@@ -40,20 +40,19 @@ namespace WebAppPrototype.Services {
             return filterList;
         }
 
-        public List<Booking> GetAllBookingsByUser(int userId)
-        {
+        //Booking should have a UserID
+        public List<Booking> GetAllBookingsByUser(int userId) {
             List<Booking> userBookings = new List<Booking>();
-            //List<User> users = GetAllUsers();
-            List<Booking> bookings = GetAllBookings();
-            foreach (var bok in bookings)
+            foreach (var bok in GetAllBookings())
             {
                 //userid - snak med Julie om hvad hun kalder den
-                //if (users)
-                //{
-                //    userBookings.Add(bok);
-                //}
+                if (bok.UserId.Equals(userId))
+                {
+                    userBookings.Add(bok);
+                    return userBookings;
+                }
             }
-            return userBookings;
+            return new List<Booking>();
         }
 
         //admin function to get all users and their booking - Might need to implement in user and boat to get individual classes
@@ -79,7 +78,6 @@ namespace WebAppPrototype.Services {
                         b.BookingId = bk.BookingId;
                         b.Name = bk.Name;
                         b.Description = bk.Description;
-                        b.Price = bk.Price;
                         b.DateTime = bk.DateTime;
                     }
                 }
