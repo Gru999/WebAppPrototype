@@ -27,12 +27,13 @@
             <input asp-for="@Model.User.PhoneNumber" class="form-control" />
             <span asp-validation-for="@Model.User.PhoneNumber" class="text-danger"></span>
         </div>
+        <p></p>
         <div class="form-check-group">
-            <input type="submit" value="Registre" class="btn-block btn btn-primary" />
+            <input type="submit" value="Register" class="btn-block btn btn-primary" />
         </div>
         <br />
     </form>
     <p>
-        <a asp-page="/Users/Index" class="btn-block btn btn-primary">Cancel</a>
+        <a asp-page="/Index" class="btn-block btn btn-primary">Cancel</a>
     </p>
 </div>

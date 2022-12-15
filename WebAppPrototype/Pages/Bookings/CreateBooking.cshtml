@@ -7,11 +7,11 @@
 <div class="row">
     <div class="col-md-4">
         <form method="post">
-            <div class="form-group">
+            @*<div class="form-group">
                 <label asp-for="@Model.Booking.BookingId" class="control-label"></label>
                 <input asp-for="@Model.Booking.BookingId" class="control-label" />
                 <span asp-validation-for="Booking.BookingId" class="text-danger"></span>
-            </div>
+            </div>*@
             <div class="form-group">
                 <label asp-for="@Model.Booking.Name" class="control-label"></label>
                 <input asp-for="@Model.Booking.Name" class="control-label" />
@@ -21,11 +21,11 @@
                 <label asp-for="@Model.Booking.Description" class="control-label"></label>
                 <input asp-for="@Model.Booking.Description" class="control-label" />
             </div>
-            <div class="form-group">
+           @* <div class="form-group">
                 <label asp-for="@Model.Booking.Price" class="control-label"></label>
                 <input asp-for="@Model.Booking.Price" class="control-label" />
                 <span asp-validation-for="Booking.Price" class="text-danger"></span>
-            </div>
+            </div>*@
             <div class="form-group">
                 <label asp-for="@Model.Booking.DateTime" class="control-label"></label>
                 <input asp-for="@Model.Booking.DateTime" class="control-label" />

@@ -3,9 +3,12 @@ Booking
 []Lav login tjek på alle sider (i OnGet metoden)
 []Brug designet fra din egen razorpages i stedet for pouls
 []Tilføj muligheden for at vælge en båd
-[]BookingId skal sættes automatisk
+[x]BookingId skal sættes automatisk
 []Description skal være valgfri, tjek om den er det i forvejen
-[]Price skal brugeren ikke selv kunne sætte og skal udregnes udfra hvor lang tid personen er væk samt hvad type båd
+([]Price skal brugeren ikke selv kunne sætte og skal udregnes udfra hvor lang tid personen er væk samt hvad type båd)
 []TimeFrame skal ændres og laves færdig
 []Kig på hvordan du får programmet til at sende en email til ejeren hvis lejeperioden overskrides
 []Færdiggøre GetAllBookingByUser og implementer
+[x]Bruge den rigtige user ved login
+[x]Færdiggøre layout på login siden/register siden
+([]Færdiggøre UserCreate)

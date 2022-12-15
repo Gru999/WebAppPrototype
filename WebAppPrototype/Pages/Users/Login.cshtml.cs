@@ -27,7 +27,7 @@ namespace WebAppPrototype.Pages.Users {
         {
             foreach (var user in userRepo.GetAllUsers())
             {
-                if (user.Email == User.Email || user.Password == User.Password)
+                if (user.Email == User.Email && user.Password == User.Password)
                 {
                     logInRepo.UserLogIn(user);
                     return RedirectToPage("/Index");

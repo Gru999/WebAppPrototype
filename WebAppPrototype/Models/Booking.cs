@@ -6,8 +6,6 @@ namespace WebAppPrototype.Models
 {
     public class Booking
     {
-        [Required]
-        [Range(typeof(int), "0", "50", ErrorMessage = "Id er uden for intervallet")]
         public int BookingId { get; set; }
 
         [Display(Name = "Booking Name")]
