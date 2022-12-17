@@ -12,6 +12,7 @@ namespace WebAppPrototype.Pages.Bookings {
         private IBookingRepository _bookingRepo;
         private LogInRepository _loggedInUser;
         private IBoatRepository _boatRepo;
+        private IUserRepository _userRepo;
 
 
         public SelectList BoatNames { get; set; }
@@ -27,17 +28,16 @@ namespace WebAppPrototype.Pages.Bookings {
             BoatNames = new SelectList(Boats, "Id", "Name");
         }
 
-        //find solution for injecting UserId into GetAllBooingsByUser
-        public IActionResult OnGet(int userId) {
-            User = _loggedInUser.GetLoggedUser();
-            Booking = _bookingRepo.GetAllBookingsByUser(userId);
-            return Page();
-        }
-        public IActionResult OnPost() {
-            if (!ModelState.IsValid) {
+        public IActionResult OnGet() {
+            if (_loggedInUser.GetLoggedUser().Equals(null)) {
+                return RedirectToPage("Users/Login");
+            } else { 
+                User = _loggedInUser.GetLoggedUser();
                 return Page();
             }
-
+        }
+        public IActionResult OnPost() {
+            Booking.UserId = _loggedInUser.GetLoggedUser().UserId;
             _bookingRepo.AddBooking(Booking);
             return RedirectToPage("Index");
         }

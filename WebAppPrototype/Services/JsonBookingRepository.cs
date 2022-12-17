@@ -6,6 +6,7 @@ using WebAppPrototype.Models;
 namespace WebAppPrototype.Services {
     public class JsonBookingRepository : IBookingRepository {
         string jsonFileName = @"JsonData\JsonBookings.json";
+
         public void AddBooking(Booking bk) {
             List<Booking> @bookings = GetAllBookings().ToList();
             List<int> bookingIds = new List<int>();
@@ -23,10 +24,10 @@ namespace WebAppPrototype.Services {
             JsonFileWriter.WritetoJsonBookings(@bookings, jsonFileName);
         }
 
-        public void DeleteBooking(int bookingId) {
-            List<Booking> bookings = GetAllBookings().ToList();
-            Booking deleteBooking = GetBooking(bookingId);
-            bookings.Remove(deleteBooking);
+        public void DeleteBooking(Booking bk) {
+            Booking bookingDelete = GetBooking(bk.BookingId);
+            List<Booking> bookings = GetAllBookings();
+            bookings.Remove(bookingDelete);
             JsonFileWriter.WritetoJsonBookings(bookings, jsonFileName);
         }
 
@@ -41,18 +42,17 @@ namespace WebAppPrototype.Services {
         }
 
         //Booking should have a UserID
-        public List<Booking> GetAllBookingsByUser(int userId) {
+        public List<Booking> GetAllBookingsByUser(User user) {
             List<Booking> userBookings = new List<Booking>();
             foreach (var bok in GetAllBookings())
             {
                 //userid - snak med Julie om hvad hun kalder den
-                if (bok.UserId.Equals(userId))
+                if (bok.UserId.Equals(user.UserId))
                 {
                     userBookings.Add(bok);
-                    return userBookings;
                 }
             }
-            return new List<Booking>();
+            return userBookings;
         }
 
         //admin function to get all users and their booking - Might need to implement in user and boat to get individual classes

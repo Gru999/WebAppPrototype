@@ -36,7 +36,7 @@ namespace WebAppPrototype.Pages.Bookings {
             if (!ModelState.IsValid) {
                 return Page();
             }
-            _repo.DeleteBooking(bookingId);
+            _repo.DeleteBooking(Booking);
             return RedirectToPage("Index");
         }
     }

@@ -19,9 +19,8 @@ namespace WebAppPrototype.Services {
             return new User();
         }
 
-        //Prob not gonna work, but debug later
         public void AddUser(User user) {
-            List<User> @users = GetAllUsers().ToList();
+            List<User> @users = GetAllUsers();
             List<int> userIdent = new List<int>();
             foreach (var usr in users) {
                 userIdent.Add(usr.UserId);

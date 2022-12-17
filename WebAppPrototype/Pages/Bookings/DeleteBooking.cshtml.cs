@@ -16,7 +16,7 @@ namespace WebAppPrototype.Pages.Bookings {
             Booking = _repo.GetBooking(bookingId);
         }
         public IActionResult OnPost() {
-            _repo.DeleteBooking(Booking.BookingId);
+            _repo.DeleteBooking(Booking);
             return RedirectToPage("Index");
         }
     }

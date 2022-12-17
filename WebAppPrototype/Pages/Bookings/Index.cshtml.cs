@@ -12,7 +12,7 @@ namespace WebAppPrototype.Pages.Bookings {
 
         //might need to bindproperty
         public User User { get; set; }
-        public string FilterCriteria { get; set; }
+        //public string FilterCriteria { get; set; }
         //to get GetAllBookingsByUser working add User property
         public List<Booking> Bookings { get; private set; }
         public IndexModel(IBookingRepository repo, LogInRepository logInRepo) {
@@ -21,20 +21,19 @@ namespace WebAppPrototype.Pages.Bookings {
         }
         public IActionResult OnGet() {
             if (_logInRepo.GetLoggedUser().Equals(null)) {
-                //get booking with the userId
                 return RedirectToPage("Users/Login");
             } else {
                 User = _logInRepo.GetLoggedUser();
-                Bookings = _repo.GetAllBookingsByUser(User.UserId);
+                Bookings = _repo.GetAllBookingsByUser(User);
                 return Page();
             }
         }
         public void OnPost() {
-            if (FilterCriteria != null) {
-                Bookings = _repo.FilterBookings(FilterCriteria);
-            } else {
-                Bookings = _repo.GetAllBookings();
-            }
+            //if (FilterCriteria != null) {
+            //    Bookings = _repo.FilterBookings(FilterCriteria);
+            //} else {
+            //    Bookings = _repo.GetAllBookings();
+            //}
         }
     }
 }
