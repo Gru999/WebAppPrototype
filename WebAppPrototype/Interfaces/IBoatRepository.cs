@@ -8,7 +8,5 @@ namespace WebAppPrototype.Interfaces
         Boat GetBoat(string boatName);
 
         void AddBoat(Boat bo);
-
-       
     }
 }

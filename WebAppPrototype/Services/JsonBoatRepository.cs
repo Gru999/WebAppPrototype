@@ -11,7 +11,24 @@ namespace WebAppPrototype.Services
 
         public void AddBoat(Boat bo)
         {
-            throw new NotImplementedException();
+            List<Boat> @boats = GetAllBoats();
+            List<int> boatIds = new List<int>();
+            foreach (var bok in boats)
+            {
+                boatIds.Add(bo.BoatId);
+            }
+
+            if (boatIds.Count != 0)
+            {
+                int start = boatIds.Max();
+                bo.BoatId = start + 1;
+            }
+            else
+            {
+                bo.BoatId = 1;
+            }
+            @boats.Add(bo);
+            JsonFileWriter.WriteToJsonBoats(@boats, jsonFileName);
         }
 
         public List<Boat> GetAllBoats()
