@@ -5,7 +5,7 @@ Booking
 []Tilføj muligheden for at vælge en båd
 [x]BookingId skal sættes automatisk
 [x]Description skal være valgfri, tjek om den er det i forvejen
-[]TimeFrame skal ændres og laves færdig
+[]TimeFrame skal ændres og laves færdig - samme måde som Poul
 [x]Færdiggøre GetAllBookingByUser og implementer
 [x]Bruge den rigtige user ved login
 [x]Færdiggøre layout på login siden/register siden
