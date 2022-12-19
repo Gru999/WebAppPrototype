@@ -6,9 +6,6 @@ namespace WebAppPrototype.Interfaces
     {
         List<Boat> GetAllBoats();
         Boat GetBoat(int id);
-
         void AddBoat(Boat bo);
-
-       
     }
 }

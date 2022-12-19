@@ -9,8 +9,8 @@ Booking
 [x]Færdiggøre GetAllBookingByUser og implementer
 [x]Bruge den rigtige user ved login
 [x]Færdiggøre layout på login siden/register siden
-[]Overfør kode til ProjektBoat
-[]Færdiggør login i ProjektBoat
+[x]Overfør kode til ProjektBoat
+[x]Færdiggør login i ProjektBoat
 
 
 /////////////////////////////////////////////////////
