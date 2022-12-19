@@ -1,12 +1,12 @@
 [
   {
     "BoatId": 1,
-    "BoatName": "Alice",
+    "BoatName": "Alpha",
     "Pier": 1
   },
   {
     "BoatId": 2,
-    "BoatName": "Bob",
+    "BoatName": "Bravo",
     "Pier": 2
   },
   {

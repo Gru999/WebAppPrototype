@@ -14,18 +14,15 @@ namespace WebAppPrototype.Pages.Bookings {
         private IBoatRepository _boatRepo;
         private IUserRepository _userRepo;
 
-
-        public SelectList BoatNames { get; set; }
-
         [BindProperty]
         public Booking Booking { get; set; }
         public User User { get; set; }
+        public SelectList BoatName { get; set; }
         public CreateBookingModel(IBookingRepository bookingRepo, LogInRepository loggedInUser, IBoatRepository boatRepo) {
             _bookingRepo = bookingRepo;
             _loggedInUser = loggedInUser;
-            _boatRepo = boatRepo;
             List<Boat> Boats = _boatRepo.GetAllBoats();
-            BoatNames = new SelectList(Boats, "Id", "Name");
+            BoatName = new SelectList(Boats, "BoatId", "BoatName");
         }
 
         public IActionResult OnGet() {

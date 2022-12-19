@@ -19,11 +19,11 @@ namespace WebAppPrototype.Services
             return JsonFileReader.ReadJsonBoats(jsonFileName);
         }
 
-        public Boat GetBoat(int boatId)
+        public Boat GetBoat(string boatName)
         {
             foreach (Boat b in GetAllBoats())
             {
-                if (b.BoatId == boatId)
+                if (b.BoatName == boatName)
                     return b;
             }
             return new Boat();

@@ -28,12 +28,5 @@ namespace WebAppPrototype.Pages.Bookings {
                 return Page();
             }
         }
-        public void OnPost() {
-            //if (FilterCriteria != null) {
-            //    Bookings = _repo.FilterBookings(FilterCriteria);
-            //} else {
-            //    Bookings = _repo.GetAllBookings();
-            //}
-        }
     }
 }

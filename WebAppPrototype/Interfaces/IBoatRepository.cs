@@ -5,7 +5,7 @@ namespace WebAppPrototype.Interfaces
     public interface IBoatRepository
     {
         List<Boat> GetAllBoats();
-        Boat GetBoat(int id);
+        Boat GetBoat(string boatName);
 
         void AddBoat(Boat bo);
 

@@ -4,6 +4,7 @@
     "UserId": 1,
     "Name": "Lorem Ipsum",
     "Description": "This is Alices 1. booking",
+    "BoatName": null,
     "DateTime": "2020-10-25T08:55:00",
     "TimeFrame": "2020-10-25T08:55:00"
   },
@@ -12,6 +13,7 @@
     "UserId": 2,
     "Name": "Lorem Ipsum",
     "Description": "This is Bobs 1. booking",
+    "BoatName": null,
     "DateTime": "2020-10-25T08:55:00",
     "TimeFrame": "2020-10-25T08:55:00"
   },
@@ -20,6 +22,7 @@
     "UserId": 3,
     "Name": "Lorem Ipsum",
     "Description": "This is Charlies 1. booking",
+    "BoatName": null,
     "DateTime": "2020-10-25T08:55:00",
     "TimeFrame": "2020-10-25T08:55:00"
   },
@@ -28,6 +31,7 @@
     "UserId": 4,
     "Name": "Lorem Ipsum",
     "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "BoatName": null,
     "DateTime": "2022-12-21T09:09:00",
     "TimeFrame": "2022-12-28T09:09:00"
   },
@@ -36,6 +40,7 @@
     "UserId": 2,
     "Name": "Lorem Ipsum",
     "Description": "This is Bobs 2. booking",
+    "BoatName": null,
     "DateTime": "2022-12-21T09:09:00",
     "TimeFrame": "2022-12-28T09:09:00"
   },
@@ -44,6 +49,7 @@
     "UserId": 2,
     "Name": "Lorem Ipsum",
     "Description": "This is Bobs 3. booking (Edited)",
+    "BoatName": null,
     "DateTime": "2022-12-22T09:09:00",
     "TimeFrame": "2022-12-28T08:08:00"
   },
@@ -51,8 +57,9 @@
     "BookingId": 7,
     "UserId": 2,
     "Name": "Lorem Ipsum",
-    "Description": "This is Bobs 4. booking (To be deleted)",
-    "DateTime": "2022-12-14T09:09:00",
-    "TimeFrame": "2022-12-27T05:05:00"
+    "Description": "Boat test",
+    "BoatName": "3",
+    "DateTime": "2022-12-27T09:09:00",
+    "TimeFrame": "2022-12-27T09:09:00"
   }
 ]

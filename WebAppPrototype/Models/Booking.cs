@@ -16,6 +16,8 @@ namespace WebAppPrototype.Models
 
         public string Description { get; set; }
 
+        public string BoatName { get; set; }
+
         //[Required(ErrorMessage = "The date is required")]
         //[Range(typeof(DateTime), "11/11/2022", "11/11/2023",
         //ErrorMessage = "Value for {0} must be between {1} and {2}")]
